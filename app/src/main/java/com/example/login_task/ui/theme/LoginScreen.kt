@@ -81,6 +81,10 @@ fun SignInScreen() {
         TextField(
             value = email,
             onValueChange = { email = it },
+            placeholder = { Text("Email or phone number",
+                fontSize = 12.sp,
+                color = Color.Gray) },
+
             //label = { Text("Email or phone number") },
             modifier = Modifier
                 .background(color = Color.White , shape = RectangleShape)
@@ -90,7 +94,7 @@ fun SignInScreen() {
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
 
             colors = TextFieldDefaults.textFieldColors(
-                containerColor = Color.Transparent, 
+                containerColor = Color.Transparent,
                 unfocusedIndicatorColor = Color.Gray,
                 focusedIndicatorColor = Color.Black,
                 unfocusedLabelColor = Color.Gray
@@ -109,6 +113,9 @@ fun SignInScreen() {
         TextField(
             value = password,
             onValueChange = { password = it },
+            placeholder = { Text("Password",
+                fontSize = 12.sp,
+                color = Color.Gray) },
             //label = { Text("Password") },
             modifier = Modifier
                 .fillMaxWidth()
